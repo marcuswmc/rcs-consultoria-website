@@ -29,7 +29,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background font-sans w-full">
+    <div className="min-h-screen flex flex-col bg-background font-sans w-full overflow-x-hidden">
       <Navbar />
       
       <div className="bg-primary text-white py-24 md:py-32 relative overflow-hidden w-full">
@@ -49,7 +49,7 @@ export default function Services() {
         </div>
       </div>
 
-      <section className="py-24 w-full">
+      <section className="py-24 w-full overflow-hidden">
         <div className="w-full px-4 md:px-12 xl:px-24">
           <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (

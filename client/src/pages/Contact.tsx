@@ -41,7 +41,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-background font-sans w-full">
+    <div className="min-h-screen flex flex-col bg-background font-sans w-full overflow-x-hidden">
       <Navbar />
       
       <div className="flex-1 w-full px-4 md:px-12 xl:px-24 py-12 md:py-20">

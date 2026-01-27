@@ -26,13 +26,13 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background font-sans w-full">
+    <div className="min-h-screen flex flex-col bg-background font-sans w-full overflow-x-hidden">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden w-full border-b bg-white">
-        {/* Subtle Gradient Overlay */}
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+      <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 w-full border-b bg-white overflow-hidden">
+        {/* Visible Gradient Overlay */}
+        <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-primary/15 to-transparent pointer-events-none" />
         
         <div className="w-full px-4 md:px-12 xl:px-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-[1920px] mx-auto">
@@ -74,49 +74,37 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative hidden lg:block h-[500px]"
             >
-              {/* Decorative Blur Element */}
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
+              {/* Evident Decorative Blur Element */}
+              <div className="absolute -top-10 -right-10 w-80 h-80 bg-accent/30 rounded-full blur-[100px] animate-pulse" />
+              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" />
               
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-[2.5rem] -rotate-1" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-[2.5rem] -rotate-1" />
               <div className="relative h-full w-full bg-primary rounded-[2.5rem] shadow-2xl overflow-hidden flex items-center justify-center border-4 border-white">
                 <div className="absolute inset-0 opacity-40 bg-[url('/abstract-blue.png')] bg-cover bg-center" />
                 
-                {/* Floating Elements / Charts */}
+                {/* Floating Analytics Card */}
                 <motion.div 
-                  animate={{ y: [0, -10, 0] }}
+                  animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-10 right-10 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-white/20 z-20"
+                  className="absolute top-12 right-12 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-2xl border border-white/40 z-20"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
-                      <TrendingUp className="h-5 w-5" />
+                  <div className="flex items-center gap-4">
+                    <div className="h-10 w-10 bg-accent/10 rounded-xl flex items-center justify-center text-accent">
+                      <TrendingUp className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold text-muted-foreground uppercase">Revenue</p>
-                      <p className="text-sm font-bold text-primary">+12.5%</p>
+                      <p className="text-[11px] font-black text-muted-foreground uppercase tracking-widest">Performance</p>
+                      <p className="text-lg font-black text-primary">+12.5%</p>
                     </div>
                   </div>
                 </motion.div>
 
                 <motion.div 
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute bottom-12 left-10 bg-white/90 backdrop-blur-sm p-5 rounded-2xl shadow-xl border border-white/20 z-20 w-48"
-                >
-                  <p className="text-xs font-bold text-primary mb-3">Performance</p>
-                  <div className="flex items-end gap-1 h-12">
-                    {[40, 70, 45, 90, 65, 80].map((h, i) => (
-                      <div key={i} className="flex-1 bg-accent rounded-t-sm" style={{ height: `${h}%` }} />
-                    ))}
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  animate={{ scale: [1, 1.05, 1] }}
+                  animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-1/2 -left-6 -translate-y-1/2 bg-white p-4 rounded-full shadow-2xl z-20 border-4 border-primary"
+                  className="absolute top-1/2 -left-6 -translate-y-1/2 bg-white p-5 rounded-3xl shadow-2xl z-20 border-4 border-primary/10"
                 >
-                  <PieChart className="h-8 w-8 text-accent" />
+                  <PieChart className="h-10 w-10 text-accent" />
                 </motion.div>
 
                 <div className="relative z-10 text-white p-10 space-y-6">
@@ -140,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Speed & Results Section */}
-      <section className="py-20 bg-background w-full">
+      <section className="py-20 bg-background w-full overflow-hidden">
         <div className="w-full px-4 md:px-12 xl:px-24">
           <div className="max-w-[1920px] mx-auto">
             <div className="text-center mb-16 space-y-3">
