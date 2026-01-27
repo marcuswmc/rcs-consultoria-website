@@ -2,66 +2,64 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, TrendingUp, ShieldCheck, Clock, ArrowRight } from "lucide-react";
+import { Zap, Rocket, Shield, Clock, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 
 export default function Home() {
   const features = [
     {
-      icon: <Clock className="h-6 w-6 text-primary" />,
-      title: "100% Online",
-      description: "Resolva tudo sem sair de casa. Atendimento ágil e digital."
+      icon: <Zap className="h-6 w-6 text-accent" />,
+      title: "Entrega Fast",
+      description: "Processos otimizados para resultados em tempo recorde. Sem burocracia."
     },
     {
-      icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
-      title: "Sem Mensalidade",
-      description: "Pague apenas pelo que usar. Transparência total nos custos."
+      icon: <Rocket className="h-6 w-6 text-accent" />,
+      title: "Soluções Ágeis",
+      description: "Planejamento tributário direto ao ponto, focado na sua economia imediata."
     },
     {
-      icon: <ShieldCheck className="h-6 w-6 text-primary" />,
-      title: "Sem Fidelidade",
-      description: "Cancele quando quiser, sem taxas abusivas ou letras miúdas."
+      icon: <Shield className="h-6 w-6 text-accent" />,
+      title: "Zero Burocracia",
+      description: "Foque no seu negócio. Nós resolvemos toda a complexidade contábil por você."
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background font-sans">
+    <div className="min-h-screen flex flex-col bg-background font-sans w-full">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden">
-        <div className="container px-4 md:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative pt-20 pb-32 md:pt-32 md:pb-48 overflow-hidden w-full border-b bg-white">
+        <div className="w-full px-4 md:px-12 xl:px-24 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-[1920px] mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6"
+              className="space-y-8"
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-primary-foreground/80">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                Assessoria Contábil em São Paulo
+              <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-primary">
+                <Rocket className="h-4 w-4" />
+                Contabilidade Fast & Digital
               </div>
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground leading-[1.1]">
-                Gestão Contábil <span className="text-primary">Simples</span> e <span className="text-primary">Estratégica</span>
+              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-primary leading-[1.05]">
+                Sua Contabilidade <br />
+                <span className="text-accent">Sem Burocracia.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-[600px]">
-                Abertura de empresas, planejamento tributário e consultoria empresarial sem burocracia. 100% Digital e focada no seu crescimento.
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-[700px] leading-relaxed">
+                Gestão contábil e planejamento tributário em São Paulo com foco em agilidade. Abertura de empresas com rapidez e entregas garantidas.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Link href="/contato">
-                  <Button size="lg" className="font-bold h-12 px-8 text-base shadow-lg shadow-primary/20">
-                    Fale com um Especialista
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button size="lg" className="font-bold h-14 px-10 text-lg bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/10">
+                    Começar Agora
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link href="/servicos">
-                  <Button variant="outline" size="lg" className="h-12 px-8 text-base bg-white/50 backdrop-blur-sm">
-                    Conheça nossos Serviços
+                  <Button variant="outline" size="lg" className="h-14 px-10 text-lg border-2">
+                    Nossas Soluções
                   </Button>
                 </Link>
               </div>
@@ -71,25 +69,24 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative hidden lg:block"
+              className="relative hidden lg:block h-[600px]"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-[2rem] blur-3xl opacity-50" />
-              <img 
-                src="/hero-accounting.png" 
-                alt="Modern Accounting Office" 
-                className="relative rounded-[2rem] shadow-2xl border border-white/20 object-cover w-full h-[600px]"
-              />
-              
-              {/* Floating Cards for Visual Interest */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-border/50 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                    <TrendingUp className="h-6 w-6" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-[2.5rem] -rotate-2" />
+              <div className="relative h-full w-full bg-primary rounded-[2.5rem] shadow-2xl overflow-hidden flex items-center justify-center border-8 border-white">
+                <div className="absolute inset-0 opacity-40 bg-[url('/abstract-blue.png')] bg-cover bg-center" />
+                <div className="relative z-10 text-white p-12 space-y-8">
+                  <div className="h-20 w-20 bg-accent rounded-2xl flex items-center justify-center shadow-2xl">
+                    <Zap className="h-10 w-10 text-white" />
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground">Crescimento Anual</p>
-                    <p className="font-bold text-lg text-foreground">+24%</p>
-                  </div>
+                  <h2 className="text-4xl font-bold">Performance Garantida.</h2>
+                  <ul className="space-y-4">
+                    {["Abertura Express", "Plantão 100% Online", "Planejamento Tributário Ágil"].map((item) => (
+                      <li key={item} className="flex items-center gap-3 text-xl font-medium">
+                        <CheckCircle className="text-accent h-6 w-6 shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -97,48 +94,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full border-none shadow-none bg-muted/30 hover:bg-muted/50 transition-colors">
-                  <CardContent className="pt-6">
-                    <div className="mb-4 inline-flex p-3 rounded-xl bg-primary/10 text-primary">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+      {/* Speed & Results Section */}
+      <section className="py-24 bg-background w-full">
+        <div className="w-full px-4 md:px-12 xl:px-24">
+          <div className="max-w-[1920px] mx-auto">
+            <div className="text-center mb-20 space-y-4">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-primary">Soluções Rápidas, Resultados Reais</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Eliminamos a papelada e a demora. Sua empresa pronta para o mercado com velocidade.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-10">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="h-full border-none shadow-xl bg-white hover:scale-105 transition-transform duration-300">
+                    <CardContent className="pt-10 pb-10 px-8 text-center space-y-4">
+                      <div className="mx-auto mb-6 inline-flex p-5 rounded-3xl bg-accent/10 text-accent">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-primary">{feature.title}</h3>
+                      <p className="text-lg text-muted-foreground leading-relaxed">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Strip */}
-      <section className="py-20 bg-foreground text-background overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform origin-bottom" />
-        <div className="container px-4 md:px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Pronto para organizar sua empresa?</h2>
-            <p className="text-primary-foreground/80 max-w-xl">
-              Deixe a burocracia com a gente e foque no que realmente importa: o crescimento do seu negócio.
-            </p>
+      {/* Full Width Callout */}
+      <section className="py-24 bg-primary text-white w-full overflow-hidden relative">
+        <div className="absolute inset-0 bg-[url('/abstract-blue.png')] bg-cover opacity-10" />
+        <div className="w-full px-4 md:px-12 xl:px-24 relative z-10">
+          <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight">Chega de atrasos e burocracia. <br /> <span className="text-accent">Sua empresa merece agilidade.</span></h2>
+              <p className="text-xl text-primary-foreground/70 max-w-2xl">Atendimento Fast em São Paulo para quem não tem tempo a perder.</p>
+            </div>
+            <Link href="/contato">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-white font-extrabold px-12 h-16 text-xl rounded-2xl shadow-2xl transition-all hover:translate-x-2">
+                Solicitar Contato Imediato
+              </Button>
+            </Link>
           </div>
-          <Link href="/contato">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-8 h-14 text-lg">
-              Solicitar Proposta Grátis
-            </Button>
-          </Link>
         </div>
       </section>
 

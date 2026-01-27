@@ -4,71 +4,54 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Building2, Calculator, Briefcase, BarChart3, FileSpreadsheet, Scale } from "lucide-react";
+import { Building2, Calculator, Briefcase, BarChart3, FileSpreadsheet, Scale, Zap, CheckCircle } from "lucide-react";
 
 export default function Services() {
   const services = [
     {
-      icon: <Building2 className="h-10 w-10" />,
-      title: "Abertura e Legalização",
-      description: "Processo completo de abertura, alteração contratual e encerramento de empresas. Cuidamos de toda a documentação legal.",
-      details: ["CNPJ e Inscrição Estadual", "Alvará de Funcionamento", "Contrato Social", "Regularização Cadastral"]
+      icon: <Zap className="h-10 w-10" />,
+      title: "Abertura Express",
+      description: "Sua empresa aberta em tempo recorde. Resolvemos toda a burocracia legal com velocidade máxima.",
+      details: ["CNPJ em dias", "Alvarás Rápidos", "Contratos Ágeis", "Assessoria Completa"]
     },
     {
       icon: <Calculator className="h-10 w-10" />,
-      title: "Gestão Tributária",
-      description: "Planejamento tributário estratégico para reduzir legalmente sua carga fiscal e garantir conformidade com o fisco.",
-      details: ["Apuração de impostos", "Recuperação de créditos", "Planejamento Simples/Lucro Presumido", "Declarações Acessórias"]
-    },
-    {
-      icon: <FileSpreadsheet className="h-10 w-10" />,
-      title: "Assessoria Contábil",
-      description: "Escrituração contábil completa, balanços, balancetes e relatórios gerenciais para tomada de decisão.",
-      details: ["Balanço Patrimonial", "DRE", "Livros Contábeis", "Análise de Performance"]
-    },
-    {
-      icon: <BarChart3 className="h-10 w-10" />,
-      title: "Consultoria Empresarial",
-      description: "Diagnóstico financeiro e operacional do seu negócio com foco em melhoria de resultados e expansão.",
-      details: ["Análise Financeira", "Gestão de Fluxo de Caixa", "Precificação", "Viabilidade de Negócios"]
-    },
-    {
-      icon: <Scale className="h-10 w-10" />,
-      title: "Departamento Pessoal",
-      description: "Gestão completa de folha de pagamento, admissões, rescisões e cumprimento das obrigações trabalhistas.",
-      details: ["Folha de Pagamento", "eSocial", "Férias e 13º", "Rescisões"]
+      title: "Gestão Tributária Fast",
+      description: "Planejamento focado em redução imediata de custos fiscais e conformidade total.",
+      details: ["Redução de Impostos", "Recuperação Ágil", "Planejamento Estratégico", "Compliance Digital"]
     },
     {
       icon: <Briefcase className="h-10 w-10" />,
-      title: "BPO Financeiro",
-      description: "Terceirização da gestão financeira da sua empresa. Controle de contas a pagar, receber e conciliação bancária.",
-      details: ["Contas a Pagar/Receber", "Conciliação Bancária", "Emissão de Notas Fiscais", "Relatórios Financeiros"]
+      title: "Consultoria Premium",
+      description: "Diagnóstico direto ao ponto para melhorar a saúde financeira do seu negócio hoje.",
+      details: ["Análise de Resultados", "Fluxo de Caixa Ágil", "Gestão de Custos", "Estratégia de Expansão"]
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background font-sans">
+    <div className="min-h-screen flex flex-col bg-background font-sans w-full">
       <Navbar />
       
-      <div className="bg-foreground text-background py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/growth-graphic.png')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-        <div className="container px-4 md:px-6 relative z-10 text-center">
+      <div className="bg-primary text-white py-24 md:py-32 relative overflow-hidden w-full">
+        <div className="absolute inset-0 bg-[url('/abstract-blue.png')] bg-cover opacity-10" />
+        <div className="w-full px-4 md:px-12 xl:px-24 relative z-10 text-center">
           <motion.div
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.5 }}
+             className="max-w-[1920px] mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Nossas Soluções</h1>
-            <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              Serviços especializados para cada etapa da vida da sua empresa.
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">Soluções <span className="text-accent">Fast</span></h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+              Eliminamos as barreiras entre você e o crescimento da sua empresa com entregas rápidas e assertivas.
             </p>
           </motion.div>
         </div>
       </div>
 
-      <section className="py-20 -mt-10">
-        <div className="container px-4 md:px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-24 w-full">
+        <div className="w-full px-4 md:px-12 xl:px-24">
+          <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -77,19 +60,21 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-muted/60">
-                  <CardHeader>
-                    <div className="mb-4 inline-flex p-3 rounded-2xl bg-primary/10 text-primary w-fit">
+                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-none bg-white p-6 rounded-[2rem]">
+                  <CardHeader className="space-y-6">
+                    <div className="inline-flex p-5 rounded-3xl bg-accent/10 text-accent w-fit">
                       {service.icon}
                     </div>
-                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                    <CardDescription className="text-base">{service.description}</CardDescription>
+                    <div>
+                      <CardTitle className="text-3xl font-bold text-primary mb-3">{service.title}</CardTitle>
+                      <CardDescription className="text-lg leading-relaxed">{service.description}</CardDescription>
+                    </div>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
+                  <CardContent className="pt-6">
+                    <ul className="space-y-4">
                       {service.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                          <div className="h-1.5 w-1.5 rounded-full bg-primary mr-2" />
+                        <li key={idx} className="flex items-center text-lg font-medium text-muted-foreground">
+                          <CheckCircle className="h-5 w-5 text-accent mr-3 shrink-0" />
                           {detail}
                         </li>
                       ))}
@@ -100,14 +85,19 @@ export default function Services() {
             ))}
           </div>
 
-          <div className="mt-20 text-center bg-muted/30 rounded-3xl p-12 border border-border/50">
-            <h2 className="text-3xl font-bold mb-4">Não encontrou o que precisa?</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Entre em contato conosco para uma consultoria personalizada. Desenvolvemos soluções sob medida para o seu modelo de negócio.
-            </p>
-            <Link href="/contato">
-              <Button size="lg" className="font-bold">Fale com um Consultor</Button>
-            </Link>
+          <div className="mt-32 text-center bg-primary rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-accent/10 opacity-20 rotate-12 translate-x-1/2" />
+            <div className="relative z-10 max-w-4xl mx-auto space-y-8">
+              <h2 className="text-4xl md:text-6xl font-bold">Precisa de uma solução imediata?</h2>
+              <p className="text-xl md:text-2xl text-primary-foreground/70">
+                Nossa equipe está pronta para o atendimento fast. Sem filas, sem espera, apenas resultados.
+              </p>
+              <Link href="/contato">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-extrabold px-12 h-16 text-xl rounded-2xl shadow-2xl">
+                  Iniciar Consultoria Agora
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
