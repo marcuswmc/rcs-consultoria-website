@@ -44,52 +44,52 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col bg-background font-sans w-full overflow-x-hidden">
       <Navbar />
       
-      <div className="flex-1 w-full px-4 md:px-12 xl:px-24 py-12 md:py-20">
-        <div className="max-w-[1920px] mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+      <div className="flex-1 w-full px-4 md:px-12 xl:px-24 py-10 md:py-16">
+        <div className="max-w-[1920px] mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
           <motion.div
              initial={{ opacity: 0, x: -20 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.5 }}
           >
-            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">Vamos Conversar?</h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
+            <h1 className="text-2xl md:text-4xl font-extrabold mb-4 text-primary tracking-tight">Vamos Conversar?</h1>
+            <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed">
               Estamos prontos para impulsionar sua empresa. Entre em contato por telefone, email ou preencha o formulário para um atendimento fast.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow">
-                <CardContent className="p-6 flex items-center gap-6">
-                  <div className="h-10 w-10 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
-                    <Phone className="h-5 w-5" />
+                <CardContent className="p-5 flex items-center gap-5">
+                  <div className="h-9 w-9 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
+                    <Phone className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Telefone / WhatsApp</p>
-                    <p className="text-lg font-bold text-primary">011 98380-6959</p>
+                    <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">Telefone / WhatsApp</p>
+                    <p className="text-base font-bold text-primary">011 98380-6959</p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow">
-                <CardContent className="p-6 flex items-center gap-6">
-                  <div className="h-10 w-10 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
-                    <Mail className="h-5 w-5" />
+                <CardContent className="p-5 flex items-center gap-5">
+                  <div className="h-9 w-9 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
+                    <Mail className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Email</p>
-                    <p className="text-lg font-bold text-primary">rcscontabilidade22@gmail.com</p>
+                    <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">Email</p>
+                    <p className="text-base font-bold text-primary">rcscontabilidade22@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow">
-                <CardContent className="p-6 flex items-center gap-6">
-                  <div className="h-10 w-10 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
-                    <MapPin className="h-5 w-5" />
+                <CardContent className="p-5 flex items-center gap-5">
+                  <div className="h-9 w-9 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
+                    <MapPin className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Localização</p>
-                    <p className="text-lg font-bold text-primary">São Paulo - SP</p>
-                    <p className="text-sm text-muted-foreground">Atendimento 100% Online para todo Brasil</p>
+                    <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest">Localização</p>
+                    <p className="text-base font-bold text-primary">São Paulo - SP</p>
+                    <p className="text-xs text-muted-foreground">Atendimento 100% Online para todo Brasil</p>
                   </div>
                 </CardContent>
               </Card>
@@ -100,37 +100,37 @@ export default function Contact() {
              initial={{ opacity: 0, x: 20 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.5, delay: 0.2 }}
-             className="bg-white rounded-[2rem] p-8 md:p-10 shadow-2xl border border-border/50"
+             className="bg-white rounded-[2rem] p-7 md:p-9 shadow-2xl border border-border/50"
           >
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Envie uma mensagem</h2>
-              <p className="text-muted-foreground">Preencha seus dados abaixo para um retorno rápido.</p>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-primary mb-1">Envie uma mensagem</h2>
+              <p className="text-sm text-muted-foreground">Preencha seus dados abaixo para um retorno rápido.</p>
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-xs font-bold uppercase text-muted-foreground">Nome Completo</FormLabel>
+                      <FormLabel className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Nome Completo</FormLabel>
                       <FormControl>
-                        <Input placeholder="Seu nome" className="h-11 rounded-xl bg-muted/30 border-transparent focus:bg-background transition-all" {...field} />
+                        <Input placeholder="Seu nome" className="h-10 rounded-xl bg-muted/30 border-transparent focus:bg-background transition-all text-sm" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid md:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs font-bold uppercase text-muted-foreground">Email</FormLabel>
+                        <FormLabel className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="seu@email.com" className="h-11 rounded-xl bg-muted/30 border-transparent focus:bg-background transition-all" {...field} />
+                          <Input placeholder="seu@email.com" className="h-10 rounded-xl bg-muted/30 border-transparent focus:bg-background transition-all text-sm" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -141,9 +141,9 @@ export default function Contact() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs font-bold uppercase text-muted-foreground">WhatsApp</FormLabel>
+                        <FormLabel className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">WhatsApp</FormLabel>
                         <FormControl>
-                          <Input placeholder="(11) 99999-9999" className="h-11 rounded-xl bg-muted/30 border-transparent focus:bg-background transition-all" {...field} />
+                          <Input placeholder="(11) 99999-9999" className="h-10 rounded-xl bg-muted/30 border-transparent focus:bg-background transition-all text-sm" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -155,11 +155,11 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-xs font-bold uppercase text-muted-foreground">Como podemos ajudar?</FormLabel>
+                      <FormLabel className="text-[10px] font-bold uppercase text-muted-foreground tracking-wider">Como podemos ajudar?</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="Descreva sua necessidade..." 
-                          className="min-h-[100px] rounded-xl bg-muted/30 border-transparent focus:bg-background resize-none transition-all" 
+                          className="min-h-[90px] rounded-xl bg-muted/30 border-transparent focus:bg-background resize-none transition-all text-sm" 
                           {...field} 
                         />
                       </FormControl>
@@ -167,9 +167,9 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full h-12 text-base font-bold rounded-xl shadow-lg shadow-primary/10 bg-primary hover:bg-primary/90 text-white">
+                <Button type="submit" className="w-full h-11 text-sm font-bold rounded-xl shadow-lg shadow-primary/10 bg-primary hover:bg-primary/90 text-white">
                   Enviar Mensagem
-                  <Send className="ml-2 h-4 w-4" />
+                  <Send className="ml-2 h-3.5 w-3.5" />
                 </Button>
               </form>
             </Form>
