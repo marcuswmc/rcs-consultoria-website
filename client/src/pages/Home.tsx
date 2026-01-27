@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Rocket, Shield, Clock, ArrowRight, CheckCircle } from "lucide-react";
+import { Zap, Rocket, Shield, Clock, ArrowRight, CheckCircle, TrendingUp, BarChart3, PieChart } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 
@@ -31,6 +31,9 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden w-full border-b bg-white">
+        {/* Subtle Gradient Overlay */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+        
         <div className="w-full px-4 md:px-12 xl:px-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-[1920px] mx-auto">
             <motion.div 
@@ -40,8 +43,8 @@ export default function Home() {
               className="space-y-6"
             >
               <div className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-bold text-primary uppercase tracking-wider">
-                <Rocket className="h-3 w-3" />
-                Contabilidade Fast & Digital
+                <div className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+                Contabilidade Rápida & Digital
               </div>
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-primary leading-tight">
                 Sua Contabilidade <br />
@@ -71,9 +74,51 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative hidden lg:block h-[500px]"
             >
+              {/* Decorative Blur Element */}
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-pulse" />
+              
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-[2.5rem] -rotate-1" />
               <div className="relative h-full w-full bg-primary rounded-[2.5rem] shadow-2xl overflow-hidden flex items-center justify-center border-4 border-white">
                 <div className="absolute inset-0 opacity-40 bg-[url('/abstract-blue.png')] bg-cover bg-center" />
+                
+                {/* Floating Elements / Charts */}
+                <motion.div 
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-10 right-10 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-white/20 z-20"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="h-8 w-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      <TrendingUp className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-bold text-muted-foreground uppercase">Revenue</p>
+                      <p className="text-sm font-bold text-primary">+12.5%</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute bottom-12 left-10 bg-white/90 backdrop-blur-sm p-5 rounded-2xl shadow-xl border border-white/20 z-20 w-48"
+                >
+                  <p className="text-xs font-bold text-primary mb-3">Performance</p>
+                  <div className="flex items-end gap-1 h-12">
+                    {[40, 70, 45, 90, 65, 80].map((h, i) => (
+                      <div key={i} className="flex-1 bg-accent rounded-t-sm" style={{ height: `${h}%` }} />
+                    ))}
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute top-1/2 -left-6 -translate-y-1/2 bg-white p-4 rounded-full shadow-2xl z-20 border-4 border-primary"
+                >
+                  <PieChart className="h-8 w-8 text-accent" />
+                </motion.div>
+
                 <div className="relative z-10 text-white p-10 space-y-6">
                   <div className="h-16 w-16 bg-accent rounded-2xl flex items-center justify-center shadow-xl">
                     <Zap className="h-8 w-8 text-white" />
