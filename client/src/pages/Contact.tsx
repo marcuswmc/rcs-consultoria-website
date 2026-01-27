@@ -50,46 +50,47 @@ export default function Contact() {
              initial={{ opacity: 0, x: -20 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.5 }}
+             className="w-full"
           >
             <h1 className="text-3xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">Vamos Conversar?</h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">
               Estamos prontos para impulsionar sua empresa. Entre em contato por telefone, email ou preencha o formulário para um atendimento fast.
             </p>
 
-            <div className="space-y-6">
-              <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow">
+            <div className="space-y-6 w-full">
+              <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow w-full">
                 <CardContent className="p-6 flex items-center gap-6">
                   <div className="h-10 w-10 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
                     <Phone className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Telefone / WhatsApp</p>
-                    <p className="text-lg font-bold text-primary">011 98380-6959</p>
+                    <p className="text-lg font-bold text-primary truncate">011 98380-6959</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow">
+              <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow w-full">
                 <CardContent className="p-6 flex items-center gap-6">
                   <div className="h-10 w-10 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Email</p>
-                    <p className="text-lg font-bold text-primary">rcscontabilidade22@gmail.com</p>
+                    <p className="text-lg font-bold text-primary truncate">rcscontabilidade22@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow">
+              <Card className="border-none shadow-sm bg-white hover:shadow-md transition-shadow w-full">
                 <CardContent className="p-6 flex items-center gap-6">
                   <div className="h-10 w-10 bg-primary/5 rounded-full flex items-center justify-center text-primary shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Localização</p>
-                    <p className="text-lg font-bold text-primary">São Paulo - SP</p>
-                    <p className="text-sm text-muted-foreground">Atendimento 100% Online para todo Brasil</p>
+                    <p className="text-lg font-bold text-primary truncate">São Paulo - SP</p>
+                    <p className="text-sm text-muted-foreground truncate">Atendimento 100% Online para todo Brasil</p>
                   </div>
                 </CardContent>
               </Card>
@@ -100,7 +101,7 @@ export default function Contact() {
              initial={{ opacity: 0, x: 20 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.5, delay: 0.2 }}
-             className="bg-white rounded-[2rem] p-8 md:p-10 shadow-2xl border border-border/50"
+             className="bg-white rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-10 shadow-2xl border border-border/50 w-full"
           >
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Envie uma mensagem</h2>
@@ -122,7 +123,7 @@ export default function Contact() {
                     </FormItem>
                   )}
                 />
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <FormField
                     control={form.control}
                     name="email"
