@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
+  userName: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
   email: z.string().email("Email inválido"),
   phone: z.string().min(10, "Telefone inválido"),
   message: z.string().optional(),
@@ -28,7 +28,7 @@ export default function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      userName: "",
       email: "",
       phone: "",
       message: "",
@@ -38,7 +38,7 @@ export default function Contact() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true);
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
@@ -139,7 +139,7 @@ export default function Contact() {
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-5">
                 <FormField
                   control={form.control}
-                  name="name"
+                  name="userName"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-xs font-bold uppercase text-muted-foreground">Nome Completo</FormLabel>
