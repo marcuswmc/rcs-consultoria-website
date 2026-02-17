@@ -128,7 +128,7 @@ export default function Contact() {
              initial={{ opacity: 0, x: 20 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 0.5, delay: 0.2 }}
-             className="bg-white rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-10 shadow-2xl border border-border/50 w-full"
+             className="bg-white rounded-2xl md:rounded-4xl p-4 sm:p-6 md:p-10 shadow-2xl border border-border/50 w-full"
           >
             <div className="mb-6 md:mb-8">
               <h2 className="text-xl sm:text-2xl font-bold text-primary mb-2">Envie uma mensagem</h2>
