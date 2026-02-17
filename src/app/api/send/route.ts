@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
-      to: ['rcs@rcsconsulting.com.br'],
+      to: 'rcs@rcsconsulting.com.br',
       subject: 'Novo contato recebido - RCS Consultoria',
       text: `Nome: ${userName}\nEmail: ${email}\nTelefone: ${phone}\nMensagem: ${message}`,
     });
