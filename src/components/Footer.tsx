@@ -1,28 +1,57 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Linkedin,
+  Facebook,
+} from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-card border-t py-12 px-4 md:px-6">
       <div className="container mx-auto grid gap-8 md:grid-cols-4">
         <div className="space-y-4">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl tracking-tighter">
+          <Link
+            href="/"
+            className="flex items-center gap-2 font-bold text-xl tracking-tighter"
+          >
             <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-extrabold">
               R
             </div>
             <span>RCS Consultoria</span>
           </Link>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Sua parceira estratégica para crescimento financeiro e gestão tributária eficiente em São Paulo.
+            Sua parceira estratégica para crescimento financeiro e gestão
+            tributária eficiente.
           </p>
         </div>
 
         <div>
           <h3 className="font-bold mb-4">Links Rápidos</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-            <li><Link href="/servicos" className="hover:text-primary transition-colors">Serviços</Link></li>
-            <li><Link href="/contato" className="hover:text-primary transition-colors">Contato</Link></li>
+            <li>
+              <Link href="/" className="hover:text-primary transition-colors">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/servicos"
+                className="hover:text-primary transition-colors"
+              >
+                Serviços
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contato"
+                className="hover:text-primary transition-colors"
+              >
+                Contato
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -45,22 +74,23 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              <span>rcscontabilidade22@gmail.com</span>
+              <span>rcs@rcsconsulting.com.br</span>
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-primary" />
-              <span>São Paulo - SP</span>
+              <span>Todo o Brasil</span>
             </li>
           </ul>
-          <div className="flex gap-4 mt-6">
+          {/* <div className="flex gap-4 mt-6">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="h-5 w-5" /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook className="h-5 w-5" /></a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="container mx-auto mt-12 pt-8 border-t text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} RCS Consultoria. Todos os direitos reservados.
+        © {new Date().getFullYear()} RCS Consultoria. Todos os direitos
+        reservados.
       </div>
     </footer>
   );

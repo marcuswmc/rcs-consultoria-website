@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="w-full px-4 md:px-12 xl:px-24 flex h-16 md:h-20 items-center justify-between">
         <div className="max-w-[1920px] mx-auto w-full flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold text-xl md:text-2xl tracking-tighter text-primary group">
-            <span className="group-hover:text-accent transition-colors">RCS Consultoria</span>
+            <span>RCS Consultoria</span>
           </Link>
 
           {/* Desktop Nav */}

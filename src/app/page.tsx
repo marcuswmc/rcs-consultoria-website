@@ -53,7 +53,7 @@ export default function Home() {
                 <span className="text-accent">Sem Burocracia.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-[600px] leading-relaxed">
-                Gestão contábil e planejamento tributário em São Paulo com foco em agilidade. Abertura de empresas com rapidez e entregas garantidas.
+                Gestão contábil e planejamento tributário 100% online com foco em agilidade. Abertura de empresas com rapidez e entregas garantidas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="/contato">
