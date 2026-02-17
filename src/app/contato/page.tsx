@@ -93,7 +93,7 @@ export default function Contact() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-[11px] sm:text-xs font-semibold text-muted-foreground uppercase tracking-wider">Telefone / WhatsApp</p>
-                    <p className="text-base sm:text-lg font-bold text-primary leading-snug break-words">11 91573-8295</p>
+                    <p className="text-base sm:text-lg font-bold text-primary leading-snug wrap-break-words">11 91573-8295</p>
                   </div>
                 </CardContent>
               </Card>
