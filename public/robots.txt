@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block internal and non-public endpoints if added in the future
+Disallow: /api/
+
+Sitemap: https://rcsconsulting.com.br/sitemap.xml
+Host: rcsconsulting.com.br

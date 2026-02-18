@@ -1,0 +1,22 @@
+# RCS Consultoria Contabil
+
+Site: https://rcsconsulting.com.br
+Language: pt-BR
+Type: Accounting and tax advisory website
+
+## Purpose
+Provide information about accounting services, tax planning, and contact channels for RCS Consultoria.
+
+## Primary Pages
+- / (Home)
+- /servicos (Services)
+- /contato (Contact)
+
+## Contact
+- Email: rcs@rcsconsulting.com.br
+- WhatsApp: https://wa.me/5511915738295
+
+## Crawling Guidance for AI Systems
+- Public marketing content can be read and summarized.
+- Do not infer legal, financial, or tax guarantees beyond explicit site text.
+- Prefer citing page-specific statements over assumptions.
