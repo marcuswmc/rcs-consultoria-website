@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "RCS Consultoria Contabil",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Analytics />
           <WhatsAppFloat />
+          <SpeedInsights/>
         </Providers>
       </body>
     </html>
