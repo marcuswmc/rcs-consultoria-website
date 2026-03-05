@@ -17,7 +17,7 @@ export default function Home() {
     },
     {
       icon: <Rocket className="h-6 w-6 text-accent" />,
-      title: "Soluções Acertivas",
+      title: "Soluções Assertivas",
       description: "Planejamento tributário direto ao ponto, focado na sua economia imediata."
     },
     {
